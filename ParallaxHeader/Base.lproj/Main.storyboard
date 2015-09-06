@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ViewController" customModule="testparallax" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3i-8g-IoW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-9Z-swb" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="890"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landscape_01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ceF-6X-WpS">
+                                                <rect key="frame" x="0.0" y="-890" width="320" height="1080"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="190" id="f22-kF-G2O"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="f22-kF-G2O"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JND-86-Chs" userLabel="Contents">
+                                                <rect key="frame" x="0.0" y="190" width="320" height="700"/>
+                                                <color key="backgroundColor" red="1" green="0.91467629345453361" blue="0.71715058072202109" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="700" id="9yB-3J-EXH"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="JND-86-Chs" firstAttribute="leading" secondItem="fwQ-9Z-swb" secondAttribute="leading" id="56u-3c-RR6"/>
+                                            <constraint firstAttribute="trailing" secondItem="ceF-6X-WpS" secondAttribute="trailing" id="Kkr-4o-XSE"/>
+                                            <constraint firstAttribute="trailing" secondItem="JND-86-Chs" secondAttribute="trailing" id="Nyu-bM-6b3"/>
+                                            <constraint firstItem="ceF-6X-WpS" firstAttribute="leading" secondItem="fwQ-9Z-swb" secondAttribute="leading" id="Q4q-NE-k0o"/>
+                                            <constraint firstItem="JND-86-Chs" firstAttribute="top" secondItem="fwQ-9Z-swb" secondAttribute="top" constant="190" id="TR0-Ux-gFH"/>
+                                            <constraint firstItem="ceF-6X-WpS" firstAttribute="top" secondItem="fwQ-9Z-swb" secondAttribute="top" id="TtK-8H-fWh"/>
+                                            <constraint firstAttribute="bottom" secondItem="JND-86-Chs" secondAttribute="bottom" id="Xku-Ko-50a"/>
+                                            <constraint firstItem="JND-86-Chs" firstAttribute="top" secondItem="ceF-6X-WpS" secondAttribute="bottom" id="mcr-TQ-IGP"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="TtK-8H-fWh"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fwQ-9Z-swb" secondAttribute="bottom" id="EGq-j8-DED"/>
+                                    <constraint firstItem="fwQ-9Z-swb" firstAttribute="leading" secondItem="A3i-8g-IoW" secondAttribute="leading" id="J2c-DC-vmw"/>
+                                    <constraint firstAttribute="trailing" secondItem="fwQ-9Z-swb" secondAttribute="trailing" id="aty-pS-87L"/>
+                                    <constraint firstItem="fwQ-9Z-swb" firstAttribute="top" secondItem="A3i-8g-IoW" secondAttribute="top" constant="8" id="wAq-c6-e2b"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ceF-6X-WpS" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" priority="750" id="26W-FZ-XzM"/>
+                            <constraint firstAttribute="bottom" secondItem="A3i-8g-IoW" secondAttribute="bottom" id="LVg-zq-xaa"/>
+                            <constraint firstItem="A3i-8g-IoW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="k5s-Oi-Njb"/>
+                            <constraint firstAttribute="trailing" secondItem="A3i-8g-IoW" secondAttribute="trailing" id="lGp-K9-zjw"/>
+                            <constraint firstItem="A3i-8g-IoW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="nG9-de-y90"/>
+                            <constraint firstAttribute="width" secondItem="fwQ-9Z-swb" secondAttribute="width" id="vo7-w6-5Fz"/>
+                            <constraint firstItem="ceF-6X-WpS" firstAttribute="top" relation="lessThanOrEqual" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="wPn-54-xL1"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Landscape_01.jpg" width="1920" height="1080"/>
+    </resources>
+</document>
